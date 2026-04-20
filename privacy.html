@@ -50,8 +50,8 @@
 
       <h3>c) Photos &amp; Camera Data</h3>
       <ul>
-        <li><strong>3D AR Try-On:</strong> Live camera feed processed entirely on your device. Camera frames are NOT transmitted to any server.</li>
-        <li><strong>2D AI Try-On:</strong> Your selected photo is transmitted to our backend, which proxies it to a third-party AI processing service for image generation. Not permanently stored after processing.</li>
+        <li><strong>3D AR Try-On:</strong> Live camera feed and face landmark detection are processed on your device. Face landmark coordinates are never transmitted to any server. However, if you opt in to training-data sharing (see Section 1(g)), selected camera frame images from your AR share/save clips — which may include your face — are captured and securely uploaded for AI model improvement.</li>
+        <li><strong>2D AI Try-On:</strong> Your selected photo is transmitted to our backend, which proxies it to a third-party AI processing service for image generation. Not permanently stored by the processing provider after generation. If you opt in to training-data sharing (see Section 1(g)), your input photo and the AI-generated result (the before/after pair) may be retained in anonymized form for AI model improvement.</li>
         <li><strong>Hair Scanner:</strong> Your photo is transmitted to our AI backend for cosmetic analysis. Results cached locally for 30 minutes, then automatically deleted.</li>
         <li><strong>Saved Face Photo (Premium):</strong> Stored ONLY on your device. Never uploaded to our servers for storage. Transmitted to our AI processing service only when you initiate a try-on. You can delete it anytime in Settings.</li>
         <li><strong>Photo Exports:</strong> Generated images saved to your photo library at your request. We do not retain copies.</li>
@@ -207,7 +207,7 @@
       </ul>
 
       <h3>c) On-Device Processing</h3>
-      <p>For 3D AR try-on: All facial landmark detection and processing occurs ENTIRELY ON YOUR DEVICE. No biometric data is transmitted to any server for this feature.</p>
+      <p>For 3D AR try-on: All facial landmark detection and coordinate processing occurs ENTIRELY ON YOUR DEVICE. The 478 landmark coordinates themselves are never transmitted to any server. However, if you opt in to training-data sharing (Section 1(g)), camera frame images from AR sessions — which may include your face — may be captured and uploaded for AI model improvement. These are raw images, not biometric coordinate data.</p>
 
       <h3>d) Consent</h3>
       <p>Before using any camera-based feature for the first time, you will be presented with a biometric consent dialog. You must affirmatively consent before any facial geometry data is processed. You may decline, in which case camera-based features will not be available.</p>
