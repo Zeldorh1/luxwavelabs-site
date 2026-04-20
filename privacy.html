@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy Policy — OmniTintAI | LuxWave Labs</title>
+  <meta name="description" content="Privacy Policy for OmniTintAI by LuxWave Labs, LLC."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-brand" href="./index.html">LuxWave Labs</a>
+      <div class="nav-links">
+        <a href="./products.html">Products</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./affiliate.html">Affiliate</a>
+      </div>
+    </nav>
+
+    <div class="hero left">
+      <a class="back-link" href="./index.html">&larr; Home</a>
+      <h1>Privacy Policy</h1>
+      <p class="lead">Last Updated: April 18, 2026</p>
+    </div>
+
+    <div class="card legal-body">
+      <p>Luxwave ("Company," "we," "us," or "our") operates OmniTintAI ("App"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our App.</p>
+      <p>By using OmniTintAI, you consent to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
+
+      <hr/>
+
+      <h2>1. Information We Collect</h2>
+      <p>We collect the following categories of information:</p>
+
+      <h3>a) Device Information</h3>
+      <ul>
+        <li><strong>Anonymous Device Identifier:</strong> A randomly generated UUID created on first app launch. Not linked to your real name or identity. Used to manage usage limits, credit balances, and preferences.</li>
+        <li><strong>Device Model, OS, and App Version:</strong> Collected for diagnostic and compatibility purposes.</li>
+        <li>We do <strong>NOT</strong> collect your phone number, IMEI, or hardware serial number.</li>
+      </ul>
+
+      <h3>b) Account Information (Optional)</h3>
+      <ul>
+        <li>Email address and password (handled by Google Firebase Authentication)</li>
+        <li>Display name (if provided)</li>
+        <li>We do <strong>NOT</strong> have access to your plaintext password — Firebase handles all authentication securely.</li>
+      </ul>
+
+      <h3>c) Photos &amp; Camera Data</h3>
+      <ul>
+        <li><strong>3D AR Try-On:</strong> Live camera feed processed entirely on your device. Camera frames are NOT transmitted to any server.</li>
+        <li><strong>2D AI Try-On:</strong> Your selected photo is transmitted to our backend, which proxies it to a third-party AI processing service for image generation. Not permanently stored after processing.</li>
+        <li><strong>Hair Scanner:</strong> Your photo is transmitted to our AI backend for cosmetic analysis. Results cached locally for 30 minutes, then automatically deleted.</li>
+        <li><strong>Saved Face Photo (Premium):</strong> Stored ONLY on your device. Never uploaded to our servers for storage. Transmitted to our AI processing service only when you initiate a try-on. You can delete it anytime in Settings.</li>
+        <li><strong>Photo Exports:</strong> Generated images saved to your photo library at your request. We do not retain copies.</li>
+        <li><strong>Stylist Card Exports:</strong> Generated locally on your device and shared via native sharing. We do not store or transmit these cards.</li>
+      </ul>
+
+      <h3>d) Biometric Information</h3>
+      <p><strong>IMPORTANT — PLEASE READ CAREFULLY</strong></p>
+      <ul>
+        <li><strong>Face Landmark Detection:</strong> Our AR feature detects 478 facial landmark points to overlay virtual hair colors. Processing occurs entirely on your device using Google's MediaPipe framework.</li>
+        <li><strong>Face Attribute Analysis:</strong> When you use the Hair Scanner, our AI analyzes facial attributes including face shape, skin undertone, and hair characteristics.</li>
+      </ul>
+      <p>This facial geometry data constitutes "biometric information" under certain state laws, including the Illinois Biometric Information Privacy Act (BIPA). See Section 5 for our complete biometric data disclosure.</p>
+
+      <h3>e) Usage &amp; Preference Data</h3>
+      <ul>
+        <li>Feature usage (which features you use and how often)</li>
+        <li>Hair color preferences, saved favorites, and style selections</li>
+        <li>Try-on history (trend IDs and timestamps)</li>
+        <li>Search queries within the App</li>
+        <li>Session duration and interaction patterns</li>
+        <li>Recommendation feedback</li>
+        <li>Hair progress journal entries (if you use this feature)</li>
+        <li>Shopping bag contents and product interactions</li>
+      </ul>
+
+      <h3>f) Purchase &amp; Credit Data</h3>
+      <ul>
+        <li>Credit balances (daily free remaining + purchased credits)</li>
+        <li>Purchase amounts (1 or 15 credits)</li>
+        <li>Premium subscription status</li>
+        <li>Feature usage counts against limits</li>
+        <li>We do <strong>NOT</strong> collect or store payment card information — all payments are processed by Google Play.</li>
+      </ul>
+
+      <h3>g) Training Data (Opt-In Only)</h3>
+      <p>With your <strong>EXPLICIT CONSENT</strong> (a separate, affirmative toggle in Settings that is OFF by default), we may collect the following categories of training data to improve our AI systems:</p>
+      <ul>
+        <li>Photo and hair segmentation mask pairs from the hair mixer feature</li>
+        <li>Frame images captured during 3D AR try-on sessions (selected automatically for image quality from your share/save clips — these may include your face)</li>
+        <li>Before/after image pairs from 2D AI try-on generations (your input photo plus the generated result — these may include your face)</li>
+        <li>Associated non-identifying metadata (timestamps, trend IDs, shade codes, anonymized device hash)</li>
+      </ul>
+      <p><strong>Training data handling:</strong></p>
+      <ul>
+        <li>Entirely optional — requires a separate affirmative opt-in toggle in Settings</li>
+        <li>You can revoke consent at any time in Settings — collection halts immediately</li>
+        <li>A rolling local buffer (approximately 300 hair mixer samples + 500 combined AR frames / 2D generation deltas) temporarily holds samples on your device before each secure upload, at which point the local copies are cleared. These are device-side buffer limits only — there is no fixed lifetime cap on the total number of samples you may contribute over time.</li>
+        <li>EXIF metadata is stripped before storage</li>
+        <li>Uploaded data is keyed to an anonymized device hash only — NOT to your real name, email, or other personal identifier</li>
+        <li>Stored in encrypted third-party object storage for the sole purpose of AI model improvement</li>
+      </ul>
+
+      <h3>h) Advertising Data (Free Users Only)</h3>
+      <ul>
+        <li>Device advertising identifier</li>
+        <li>Ad interaction data (impressions, clicks)</li>
+        <li>General location data (for ad targeting)</li>
+        <li>Premium users see NO ads and NO advertising data is collected.</li>
+      </ul>
+
+      <hr/>
+
+      <h2>2. Permissions We Request</h2>
+      <ul>
+        <li><strong>Camera:</strong> Required for 3D AR try-on, hair scanner, and photo capture.</li>
+        <li><strong>Photo Library:</strong> To select photos for AI try-on and to save generated images.</li>
+        <li><strong>Internet:</strong> Required for all AI processing, credit management, trend data, and product information.</li>
+        <li><strong>Notifications:</strong> Optional, for hair journey reminders and feature updates.</li>
+        <li><strong>Vibration:</strong> For haptic feedback on interactions.</li>
+      </ul>
+      <p>You can manage these permissions at any time through your device's Settings.</p>
+
+      <hr/>
+
+      <h2>3. How We Use Your Information</h2>
+      <ul>
+        <li><strong>a) Provide Services:</strong> Process your photos for AR overlay and AI try-on generation, analyze your hair and face attributes, deliver personalized style recommendations.</li>
+        <li><strong>b) Manage Usage &amp; Credits:</strong> Track daily free usage limits, maintain purchased credit balances, enforce fair use policies.</li>
+        <li><strong>c) Personalize Experience:</strong> Remember your preferences, saved favorites, and taste profile.</li>
+        <li><strong>d) Display Advertisements:</strong> Show contextual ads to free-tier users via Google AdMob. Premium users see no ads.</li>
+        <li><strong>e) Analytics &amp; Improvement:</strong> Understand how features are used to improve the App experience. Analytics data is aggregated and anonymized.</li>
+        <li><strong>f) AI Model Training (Opt-In Only):</strong> If you consent, we use anonymized photos, segmentation masks, AR frame captures, and 2D before/after pairs to improve our hair segmentation, color-rendering, and style-generation AI models. All training data is EXIF-stripped and stripped of personal identifiers before use. Consent can be revoked in Settings at any time.</li>
+        <li><strong>g) Communicate:</strong> Send optional notifications about your hair journey progress and feature updates.</li>
+        <li><strong>h) Security &amp; Fraud Prevention:</strong> Detect and prevent abuse, enforce usage limits, and maintain service integrity.</li>
+        <li><strong>i) Service Monitoring:</strong> Automated health checks to ensure availability and performance. No user-identifiable information is collected by these checks.</li>
+        <li><strong>j) AI Recommendations:</strong> Use your scan results (undertone, level, hair condition) to generate personalized shade suggestions. Recommendations are NOT endorsements by product manufacturers or Amazon.</li>
+      </ul>
+
+      <hr/>
+
+      <h2>4. How We Share Your Information</h2>
+
+      <h3>a) AI Processing Provider</h3>
+      <ul>
+        <li><strong>What we share:</strong> Your photo (when you use 2D AI try-on or Hair Scanner)</li>
+        <li><strong>Purpose:</strong> AI image generation and cosmetic hair analysis</li>
+        <li><strong>Retention:</strong> Photos are processed and not permanently stored by the provider</li>
+        <li><strong>Note:</strong> Photos are transmitted via HTTPS only when you initiate a generation or scan</li>
+      </ul>
+
+      <h3>b) Authentication &amp; Analytics Provider</h3>
+      <ul>
+        <li><strong>What we share:</strong> Email/password (if account created), app usage events, user properties</li>
+        <li><strong>Purpose:</strong> Authentication, analytics</li>
+      </ul>
+
+      <h3>c) Advertising Provider (Google AdMob — Free Users ONLY)</h3>
+      <ul>
+        <li><strong>What we share:</strong> Device advertising ID, ad interaction data</li>
+        <li><strong>Purpose:</strong> Displaying advertisements to free-tier users</li>
+        <li><strong>Premium users:</strong> NO data shared with any advertising provider</li>
+      </ul>
+
+      <h3>d) Amazon.com, Inc.</h3>
+      <ul>
+        <li><strong>What we share:</strong> Product search queries (no personal information)</li>
+        <li><strong>Purpose:</strong> Product search and affiliate commerce</li>
+        <li><strong>Disclosure:</strong> OmniTintAI is a participant in the Amazon Services LLC Associates Program. We may earn commissions on qualifying purchases. This does not affect the price you pay.</li>
+      </ul>
+
+      <h3>e) Cloud Infrastructure &amp; Storage Providers</h3>
+      <ul>
+        <li><strong>What we share:</strong> All data transmitted to our backend passes through our infrastructure providers' networks. If you opt in to training-data sharing, anonymized training images are stored in third-party encrypted object storage.</li>
+        <li><strong>Purpose:</strong> Backend hosting, request processing, and (for opt-in users only) training-data storage for AI model improvement</li>
+        <li><strong>Security:</strong> All data is encrypted in transit (HTTPS/TLS) and at rest. Stored training data is keyed by anonymized device hash only.</li>
+      </ul>
+
+      <div class="do-not">
+        <p><strong>WE DO NOT:</strong></p>
+        <ul>
+          <li>Sell your personal information to any third party</li>
+          <li>Share your photos with advertisers</li>
+          <li>Provide your biometric data to any third party (except as necessary to deliver the third-party AI processing services you initiate, such as 2D AI Try-On or Hair Scanner)</li>
+          <li>Allow third parties to use your data for their own marketing purposes</li>
+        </ul>
+      </div>
+
+      <hr/>
+
+      <h2>5. Biometric Data Disclosure</h2>
+      <p>This section is provided in compliance with the Illinois Biometric Information Privacy Act (740 ILCS 14/1 et seq.) and similar state biometric privacy laws.</p>
+
+      <h3>a) What Biometric Data We Collect</h3>
+      <p>OmniTintAI processes facial geometry data — specifically, the spatial coordinates of 478 facial landmark points — to overlay virtual hair colors and styles onto your face in real-time (3D AR) and to analyze your facial attributes (Hair Scanner).</p>
+
+      <h3>b) Purpose</h3>
+      <p>Biometric data is collected and used SOLELY for:</p>
+      <ul>
+        <li>Rendering accurate 3D AR hair color overlays on your face</li>
+        <li>Analyzing face shape, skin undertone, and hair attributes for personalized recommendations</li>
+        <li>Generating 2D AI try-on images (photo sent to a third-party AI service for processing)</li>
+      </ul>
+
+      <h3>c) On-Device Processing</h3>
+      <p>For 3D AR try-on: All facial landmark detection and processing occurs ENTIRELY ON YOUR DEVICE. No biometric data is transmitted to any server for this feature.</p>
+
+      <h3>d) Consent</h3>
+      <p>Before using any camera-based feature for the first time, you will be presented with a biometric consent dialog. You must affirmatively consent before any facial geometry data is processed. You may decline, in which case camera-based features will not be available.</p>
+
+      <h3>e) Retention &amp; Destruction</h3>
+      <ul>
+        <li><strong>3D AR face landmarks:</strong> Processed in real-time, never stored. Discarded immediately when you close the AR view.</li>
+        <li><strong>Hair Scanner analysis results:</strong> Cached locally for 30 minutes, then automatically deleted.</li>
+        <li><strong>2D AI try-on photos:</strong> Transmitted to our AI processing provider for generation, then discarded. Generated result images stored in device temporary cache, cleared on cache clear.</li>
+        <li><strong>Training data (opt-in):</strong> Held in a rolling local buffer (approximately 300 hair mixer samples + 500 combined AR/generation deltas) that clears on each successful upload. If uploaded, stored in anonymized form — keyed by device hash only — in third-party encrypted object storage. There is no fixed lifetime cap on samples you may contribute. You may delete all local training data at any time by disabling the toggle in App Settings or clearing App data.</li>
+      </ul>
+
+      <h3>f) No Sale or Disclosure</h3>
+      <p>We do NOT sell, lease, trade, or otherwise profit from your biometric data. We disclose biometric data only as necessary to provide services you affirmatively initiate — specifically: (1) transmitting your photo to third-party AI processing services when you use 2D AI Try-On or Hair Scanner; and (2) if and only if you opt in to training-data sharing, uploading anonymized, EXIF-stripped images to third-party encrypted object storage for AI model improvement. Training data is keyed by anonymized device hash, is never linked to your real identity, and is never used to identify you.</p>
+
+      <h3>g) Revocation</h3>
+      <p>You may revoke your biometric data consent at any time by:</p>
+      <ul>
+        <li>Discontinuing use of camera-based features</li>
+        <li>Clearing App data in your device settings</li>
+        <li>Uninstalling the App</li>
+      </ul>
+      <p>Upon revocation, all locally stored biometric-related data is destroyed.</p>
+
+      <h3>h) Security</h3>
+      <ul>
+        <li>On-device processing (3D AR data never leaves your device)</li>
+        <li>HTTPS/TLS encryption for all data in transit</li>
+        <li>Enterprise-grade cloud infrastructure security for backend processing</li>
+        <li>No permanent server-side storage of raw biometric data</li>
+      </ul>
+
+      <hr/>
+
+      <h2>6. Data Retention</h2>
+      <table>
+        <thead><tr><th>Data Type</th><th>Retention Period</th></tr></thead>
+        <tbody>
+          <tr><td>Device identifier</td><td>Until you uninstall the App or clear App data</td></tr>
+          <tr><td>Account credentials</td><td>Until you delete your account</td></tr>
+          <tr><td>Face analysis cache</td><td>30 minutes (auto-deleted)</td></tr>
+          <tr><td>AR face landmarks</td><td>Not stored — real-time only</td></tr>
+          <tr><td>Try-on usage (daily)</td><td>48 hours (server-side, auto-expires)</td></tr>
+          <tr><td>Purchased credits</td><td>Permanent (until used)</td></tr>
+          <tr><td>Favorites &amp; preferences</td><td>Until you clear App data</td></tr>
+          <tr><td>Telemetry events</td><td>Until synced to our servers, then up to 24 months</td></tr>
+          <tr><td>Training data (local)</td><td>Rolling buffer (~300 hair mixer + ~500 AR/generation deltas); cleared on each successful upload, on toggle-off, or on uninstall</td></tr>
+          <tr><td>Training data (uploaded)</td><td>Retained indefinitely in anonymized form (device-hash keyed) for AI model improvement</td></tr>
+          <tr><td>Generated try-on images</td><td>Device cache only — cleared on cache clear</td></tr>
+          <tr><td>Saved face photo</td><td>On-device only — until you delete it, clear App data, or uninstall</td></tr>
+          <tr><td>Stylist card exports</td><td>Device cache only — not stored on our servers</td></tr>
+          <tr><td>Service health data</td><td>2 minutes (auto-expires, no user data)</td></tr>
+          <tr><td>Diagnostic logs</td><td>Until you clear via Settings</td></tr>
+        </tbody>
+      </table>
+
+      <hr/>
+
+      <h2>7. Your Rights — California Residents (CCPA/CPRA)</h2>
+      <ul>
+        <li><strong>a) Right to Know:</strong> Request disclosure of what personal information we have collected about you, the sources, purpose, and third parties.</li>
+        <li><strong>b) Right to Delete:</strong> Request deletion of your personal information. Delete local data by clearing App data in device settings. For server-side data, contact us below.</li>
+        <li><strong>c) Right to Opt Out of Sale:</strong> We do NOT sell your personal information. There is nothing to opt out of.</li>
+        <li><strong>d) Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+        <li><strong>e) Right to Correct:</strong> You may request correction of inaccurate personal information.</li>
+        <li><strong>f) Right to Limit Use of Sensitive Personal Information:</strong> You may limit our use of sensitive personal information (including biometric data) to purposes necessary to provide the service.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at: <a href="mailto:privacy@luxwavelabs.com">privacy@luxwavelabs.com</a></p>
+      <p>We will respond to verifiable consumer requests within 45 days.</p>
+
+      <hr/>
+
+      <h2>8. Children's Privacy (COPPA)</h2>
+      <p>OmniTintAI is intended for users aged 13 and older. We do NOT knowingly collect personal information from children under 13.</p>
+      <p>If you are a parent or guardian and believe your child under 13 has provided personal information to us, please contact us immediately at <a href="mailto:privacy@luxwavelabs.com">privacy@luxwavelabs.com</a>. We will promptly delete any such information.</p>
+
+      <hr/>
+
+      <h2>9. Data Security</h2>
+      <ul>
+        <li>All data in transit is encrypted using HTTPS/TLS</li>
+        <li>Backend services run on enterprise-grade cloud infrastructure</li>
+        <li>API keys and secrets are stored securely as server-side environment secrets — never in client code</li>
+        <li>Biometric data (3D AR) is processed on-device and never transmitted</li>
+        <li>Photos sent for AI processing are transmitted over encrypted connections</li>
+        <li>Device identifiers are anonymous UUIDs — not linked to your identity</li>
+        <li>Local data is stored in your device's secure storage</li>
+      </ul>
+      <p>No method of transmission or storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+
+      <hr/>
+
+      <h2>10. Advertising</h2>
+      <h3>a) Free Users</h3>
+      <p>Free-tier users see advertisements powered by Google AdMob: banner ads, interstitial ads (with cooldown periods), and optional rewarded video ads. AdMob may use your device's advertising identifier and general location to serve relevant ads. You can limit ad tracking through your device's privacy settings.</p>
+      <h3>b) Premium Users</h3>
+      <p>Premium subscribers see ZERO advertisements. No ad-related data is collected from premium users. AdMob is completely disabled for premium accounts.</p>
+      <h3>c) Ad Preferences</h3>
+      <p>Manage ad preferences through Google's Ad Settings, your device's privacy/advertising settings, or by upgrading to Premium.</p>
+
+      <hr/>
+
+      <h2>11. Amazon Affiliate Disclosure</h2>
+      <p>OmniTintAI is a participant in the Amazon Services LLC Associates Program. When you view or purchase products through links in OmniTintAI:</p>
+      <ul>
+        <li>We may earn a commission on qualifying purchases</li>
+        <li>This does NOT affect the price you pay</li>
+        <li>Product availability and pricing are determined by Amazon and its sellers</li>
+        <li>We do not control Amazon's checkout, payment, or fulfillment processes</li>
+      </ul>
+
+      <hr/>
+
+      <h2>12. Data Deletion</h2>
+      <ul>
+        <li><strong>a) Local Data:</strong> Go to your device Settings &rarr; Apps &rarr; OmniTintAI &rarr; Clear Data. This removes all preferences, favorites, cached photos, training data, and usage history from your device.</li>
+        <li><strong>b) Account Data:</strong> Delete your account through the App's Settings screen.</li>
+        <li><strong>c) Server-Side Data:</strong> Contact us at <a href="mailto:privacy@luxwavelabs.com">privacy@luxwavelabs.com</a>. We will process deletion requests within 30 days.</li>
+        <li><strong>d) Residual Data:</strong> Anonymized, aggregated analytics data that cannot be linked to you may be retained even after deletion.</li>
+      </ul>
+
+      <hr/>
+
+      <h2>13. Do Not Track</h2>
+      <p>OmniTintAI does not currently respond to "Do Not Track" browser signals as there is no industry standard for mobile applications. You can control data collection through the permissions and settings described in this policy.</p>
+
+      <hr/>
+
+      <h2>14. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of material changes by updating the "Last Updated" date at the top of this policy and displaying a notice within the App. Your continued use of OmniTintAI after changes take effect constitutes acceptance of the revised Privacy Policy.</p>
+
+      <hr/>
+
+      <h2>15. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+      <p>
+        <strong>LuxWave Labs, LLC</strong><br/>
+        Privacy Inquiries: <a href="mailto:privacy@luxwavelabs.com">privacy@luxwavelabs.com</a><br/>
+        Legal Inquiries: <a href="mailto:legal@luxwavelabs.com">legal@luxwavelabs.com</a><br/>
+        Bug Reports &amp; Support: <a href="mailto:support@luxwavelabs.com">support@luxwavelabs.com</a>
+      </p>
+      <p class="small">For CCPA requests, include "CCPA Request" in your subject line. For biometric data inquiries, include "Biometric Data Inquiry" in your subject line.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="./affiliate.html">Affiliate Disclosure</a>
+      <a href="./products.html">Products</a>
+    </div>
+    &copy; 2026 LuxWave Labs, LLC. All rights reserved.
+  </footer>
+</body>
+</html>
+
